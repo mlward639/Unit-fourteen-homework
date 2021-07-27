@@ -70,6 +70,7 @@ input {
   box-sizing: border-box;
 }
 
-#signupInstead {
+#signupInstead,
+#loginInstead {
   font-size: 16px;
 }
