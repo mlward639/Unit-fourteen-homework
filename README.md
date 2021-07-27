@@ -1,7 +1,5 @@
 # Unit-fourteen-homework
 
-# Unit-thirteen-homework
-
 <img src='https://img.shields.io/badge/License-MIT-yellow.svg'>
 
 ## Description
@@ -19,7 +17,7 @@ CMS-style blog site where developers can publish blog posts and articles, as wel
 * Use package.json to download dependencies. In terminal, type:
 
         npm install
-        --------------
+------------UPDATE ---------------------
 * To populate database with test data, type the following in the terminal:
     
         run node seeds
@@ -28,7 +26,7 @@ CMS-style blog site where developers can publish blog posts and articles, as wel
         
          npm start
          --------------
-
+-----------------------------------------
 
 ## Usage
 Navigation links:
@@ -43,14 +41,18 @@ Navigation links:
 
 ## Credits
 Libraries:
-* MySQL2 to connect to MySQL database --------------
-* Express.js API to create back end of web application --------------
+* MySQL2 to connect to MySQL database 
+* Express.js API to create back end of web application 
 * Sequelize for object–relational mapping
-* Dotenv package to use environmental variables to store sensitive data --------------
+* Dotenv package to use environmental variables to store sensitive data 
 * Insomnia REST client for API testing --------------
-* Handlebars.js for templating language
-* express-session for authentication 
+* Handlebars.js for templating language (express-handlebars package to implement Handlebar.js)
+* Express-session and connect-session-sequelize for authentication 
+-------DELETE --------------------
+**Note**: The [express-session](https://www.npmjs.com/package/express-session) package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
+---------------------------------------
 * Heroku to deploy
+* Bcrypt to hash passwords
 
 ## Contribution Guidelines
 Utilize <a href= "https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md">The Contributor Covenant</a> as reference for appropriate contribution guidelines.
@@ -81,4 +83,4 @@ Screenshot of
 ## URLs
 <a href="https://github.com/mlward639/Unit-fourteen-homework">Link to GitHub Repository</a>
 
-<a href="">Link to </a>
+<a href="">Link to Deployed Heroku Site</a>
