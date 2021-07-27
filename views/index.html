@@ -28,29 +28,16 @@
       </h1>
     </header>
     <!-- BELOW -->
-    <div class="row">
-      <div class="col-md-6 form-container">
-        <h2>Sign Up</h2>
     
-        <form class="form login-form">
-          <div class="form-group">
-            <label for="username-login">Username:</label>
-            <br>
-            <input class="form-input" type="text" id="username-login" />
-          </div>
-          <div class="form-group">
-            <label for="password-login">Password:</label>
-            <br>
-            <input class="form-input" type="password" id="password-login" />
-          </div>
-          <br>
-          <div class="form-group">
-            <button class="btn btn-primary" type="submit">Sign Up!</button>
-          </div>
-          <br>
-          <a href="#loginpage" id="loginInstead">Login instead</a>
-        </form>
+    <div class="row mb-4 blogs">
+      <div class="col-md-5">
+        <h2>
+          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+          <a href="/blog/{{blog.id}}">{{blog.title}}</a><span>{{blog.created}}</span>
+        </h2>
+        <p>{{blog.description}}</p>
       </div>
+    </div>
       
 
 </html>
