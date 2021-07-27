@@ -1,0 +1,75 @@
+:root {
+  --darkBrown: rgb(37, 10, 10);
+  --lightGray: rgb(226, 226, 228);
+  --darkerGray: rgb(174, 174, 175);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: var(--darkBrown);
+  color: white;
+  padding: 5px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+#title {
+  background-color: var(--lightGray);
+  color: var(--darkBrown);
+  border-radius: 5px;
+  box-shadow: 4px 4px var(--darkerGray);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header nav a {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--lightGray);
+}
+
+.form-container {
+  border: 4px solid var(--darkBrown);
+  margin-top: 15px;
+}
+
+.form-container h2 {
+  background-color: var(--darkBrown);
+  width: 100%;
+  color: white;
+  padding-left: 10px;
+  margin-top: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.form {
+  padding-left: 15px;
+  padding-top: 5px;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+input {
+  width: 98%;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 98%;
+  font-size: 18px;
+  padding: 5px;
+  float: center;
+  background-color: var(--darkerGray);
+  box-sizing: border-box;
+}
+
+#signupInstead {
+  font-size: 16px;
+}
