@@ -33,13 +33,6 @@ AllPosts.init(
         key: "id",
       },
     },
-    myPost_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "MyPosts",
-        key: "id",
-      },
-    },
   },
   {
     sequelize,
