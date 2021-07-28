@@ -26,6 +26,13 @@ AllPosts.init(
     content: {
       type: DataTypes.STRING,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
     myPost_id: {
       type: DataTypes.INTEGER,
       references: {

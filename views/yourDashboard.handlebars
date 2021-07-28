@@ -18,12 +18,12 @@
     </header>
 
 <!-- Loop over each object in the blogs array -->
-{{#each myBlogs as |myBlog| }}
-    <div class="row mb-4 blogs">
+{{#each myPosts as |myPost| }}
+    <div class="row mb-4 posts">
       <div class="col-md-5">
         <h2>
           <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-          <a href="/blog/{{blog.id}}">{{blog.title}}</a><span>{{blog.created}}</span>
+          <a href="/post/{{MyPost.id}}">{{MyPost.title}}</a><span>{{MyPost.date_created}}</span>
         </h2>
       </div>
     </div>
