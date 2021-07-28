@@ -1,3 +1,22 @@
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <nav>
+        <a href="/home">Home</a> |
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/dashboard">Dashboard</a> |
+        <a href="######" id="logout">logout</a>
+        {{else}}
+        <a href="/login">Dashboard</a> |
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+      <h1>
+        <a href="/" id="title">Your Dashboard</a>
+      </h1>
+    </header>
+
 <!-- Loop over each object in the blogs array -->
 {{#each myBlogs as |myBlog| }}
     <div class="row mb-4 blogs">
