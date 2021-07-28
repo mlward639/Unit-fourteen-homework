@@ -1,15 +1,15 @@
 <!-- Loop over each object in the blogs array -->
-{{#each blogs as |blog| }}
+{{#each myBlogs as |myBlog| }}
     <div class="row mb-4 blogs">
       <div class="col-md-5">
         <h2>
           <!-- Call helper function with triple brackets to render the emoji span as HTML -->
           <a href="/blog/{{blog.id}}">{{blog.title}}</a><span>{{blog.created}}</span>
         </h2>
-        <p>{{blog.description}}</p>
       </div>
     </div>
 {{/each}}
+
     <div class="form-group">
-      <button class="btn btn-primary" type="submit">+ New Post</button>
+      <button class="btn btn-secondary" type="submit" id="plusNewPost">+ New Post</button>
     </div>

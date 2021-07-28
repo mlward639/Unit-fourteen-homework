@@ -81,3 +81,13 @@ input {
   padding: 4px;
   margin: 5px;
 }
+
+#plusNewPost {
+  background-color: var(--darkBrown);
+  color: white;
+  width: 10%;
+  margin-top: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
