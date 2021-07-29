@@ -1,14 +1,17 @@
 [
     {
       "title": "Example A",
-      "content": "Example A post content."
+      "content": "Example A post content.",
+      "user_id": 1
     },
     {
       "title": "Example B",
-      "content": "Example B post content."
+      "content": "Example B post content.",
+      "user_id": 2
     },
     {
       "title": "Example C",
-      "content": "Example C post content."
+      "content": "Example C post content.",
+      "user_id": 3
     }
   ]

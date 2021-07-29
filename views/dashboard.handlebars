@@ -1,18 +1,18 @@
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+<header>
       <h1>
         <a href="/" id="title">Your Dashboard</a>
       </h1>
-    </header>
+</header>
 
-<!-- Loop over each object in the blogs array -->
-{{#each Posts as |Post| }}
+<!-- Loop over each object in your blogs array -->
+{{#each posts as |post| }}
     <div class="row mb-4 posts">
-      <div class="col-md-5">
+      <div class="col-md-5 homepage">
         <h2>
-          <a href="/post/{{allposts.id}}">{{allposts.title}}</a><span>{{allposts.date_created}}</span>
+          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+          <a href="/posts/{{id}}">{{allposts.title}}</a><span>: Posted by {{username}} on {{format_date allposts.date_created}}</span>
         </h2>
+        <p>{{content}}</p>
       </div>
     </div>
 {{/each}}
