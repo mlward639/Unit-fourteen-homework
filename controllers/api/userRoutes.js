@@ -28,23 +28,19 @@ router.post("/login", async (req, res) => {
     });
     // if user's info does not match any user from the database, give error message
     if (!userData) {
-      res
-        .status(400)
-        .json({
-          message:
-            "Unable to login due to incorrect username or password. Try again.",
-        });
+      res.status(400).json({
+        message:
+          "Unable to login due to incorrect username or password. Try again.",
+      });
       return;
     }
     // check if valid password.
     const validPassword = await userData.checkPassword(req.body.password);
     if (!validPassword) {
-      res
-        .status(400)
-        .json({
-          message:
-            "Unable to login due to incorrect username or password. Try again.",
-        });
+      res.status(400).json({
+        message:
+          "Unable to login due to incorrect username or password. Try again.",
+      });
       return;
     }
     //if password is valid, save session with user logged in
