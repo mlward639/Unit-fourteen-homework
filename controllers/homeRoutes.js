@@ -28,6 +28,16 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// Signup page
+router.get("/signup", async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    res.render("signup");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // add link on title name of posts to change url to this **********
 // add comment handlebar *****
 // when clicking on one post, it is opened and redirected to add comment page
