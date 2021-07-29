@@ -1,15 +1,13 @@
+
 <!-- Loop over each object in the blogs array -->
 {{#each posts as |post| }}
     <div class="row mb-4 posts">
-      <div class="col-md-5">
+      <div class="col-md-5 homepage">
         <h2>
           <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-          <a href="/posts/{{AllPost.id}}">{{AllPost.title}}</a><span>Posted by {{user.username}} on {{AllPosts.date_created}}</span>
+          <a href="/posts/{{id}}">{{title}}</a><span class="tiny">: Posted by {{user.username}} on {{format_date date_created}}</span>
         </h2>
-        <p>{{AllPosts.description}}</p>
+        <p>{{content}}</p>
       </div>
     </div>
 {{/each}}
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">+ New Post</button>
-    </div>

@@ -6,10 +6,10 @@
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/dashboard">Dashboard</a> |
-        <a href="######" id="logout">logout</a>
+        <a href="######" id="logout">Logout</a>
         {{else}}
         <a href="/login">Dashboard</a> |
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
       <h1>
@@ -22,8 +22,7 @@
     <div class="row mb-4 posts">
       <div class="col-md-5">
         <h2>
-          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-          <a href="/post/{{AllPosts.id}}">{{AllPosts.title}}</a><span>{{AllPosts.date_created}}</span>
+          <a href="/post/{{allposts.id}}">{{allposts.title}}</a><span>{{allposts.date_created}}</span>
         </h2>
       </div>
     </div>

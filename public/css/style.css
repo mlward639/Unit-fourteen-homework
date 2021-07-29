@@ -91,3 +91,25 @@ input {
   left: 45%;
   bottom: 20px;
 }
+
+.homepage h2 {
+  font-size: 20px;
+  background-color: var(--darkBrown);
+  color: white;
+  margin-top: 0px;
+  padding: 5px;
+}
+
+.homepage span {
+  font-size: 12px;
+}
+
+.homepage p {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.homepage {
+  border: 2px solid var(--darkBrown);
+  margin: 15px;
+}
