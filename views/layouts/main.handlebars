@@ -23,9 +23,6 @@
         <a href="/login">Login</a>
         {{/if}}
       </nav>
-      <h1>
-        <a href="/" id="title">The Tech Blog</a>
-      </h1>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
@@ -39,10 +36,9 @@
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="../../public/js/logout.js"></script>
-  {{else}}
-  <!-- Render script for logged out users only -->
-  <script src="../../public/js/login.js"></script>
+  
   {{/if}}
+
 </body>
 
 </html>

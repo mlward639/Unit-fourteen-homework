@@ -1,3 +1,8 @@
+function test() {
+  console.log("PLEASE!!!!!!!!1");
+}
+test();
+
 // LOGIN
 const loginFormHandler = async (event) => {
   event.preventDefault();
@@ -12,9 +17,9 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
-    // if successful, redirect to the 'Your Dashboard' page
+    // if successful, redirect to the 'Dashboard' page
     if (response.ok) {
-      document.location.replace("/yourDashboard");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
@@ -39,9 +44,9 @@ const signupFormHandler = async (event) => {
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
-    // If successful, redirect the browser to the 'Your Dashboard' page
+    // If successful, redirect the browser to the ' Dashboard' page
     if (response.ok) {
-      document.location.replace("/yourDashboard");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }

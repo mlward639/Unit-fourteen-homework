@@ -73,7 +73,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render("yourDashboard", {
+    res.render("dashboard", {
       ...user,
       logged_in: req.session.logged_in,
     });
@@ -85,7 +85,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/yourDashboard");
+    res.redirect("/dashboard");
     return;
   }
 
