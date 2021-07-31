@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 // POST route to create user
-router.post("/", async (req, res) => {
+router.post("/api/users", async (req, res) => {
   try {
     // *** make sure the route matches up correctly elsewhere
     const userData = await User.create(req.body);
@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
 });
 
 // POST route to login
-router.post("/login", async (req, res) => {
+router.post("/api/users/login", async (req, res) => {
   try {
     // find user in db that has matching username with the login information entered by user
     const userData = await User.findOne({
@@ -49,8 +49,8 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
       res.json({ user: userData, message: "You are logged in." });
     });
-    console.log("-----------", userData);
-    console.log("-----------", req.session.user_id);
+    // console.log("-----------", userData);
+    // console.log("-----------", req.session.user_id);
   } catch (err) {
     res.status(400).json(err);
   }

@@ -74,11 +74,13 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render("dashboard", {
-      user,
-      logged_in: req.session.logged_in,
+      ...user,
+      logged_in: true,
     });
     // console.log("**********", user);
     // console.log("!!!!!!!!", req.session.user_id);
+    console.log("~~~~~~", user.title);
+    //console.log("??????", allposts.title);
   } catch (err) {
     res.status(500).json(err);
   }

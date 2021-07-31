@@ -5,17 +5,17 @@
 </header>
 
 <!-- Loop over each object in your blogs array -->
-{{#each posts as |post| }}
+
     <div class="row mb-4 posts">
       <div class="col-md-5 homepage">
         <h2>
           <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-          <a href="/posts/{{id}}">{{allposts.title}}</a><span>: Posted by {{username}} on {{format_date allposts.date_created}}</span>
+          <a href="/posts/{{user.id}}">{{user.title}}</a><span>: Posted by {{user.username}} on {{date_created}}</span>
         </h2>
-        <p>{{content}}</p>
+        <p>{{allposts.content}}</p>
       </div>
     </div>
-{{/each}}
+
 
     <div class="form-group">
       <button class="btn btn-secondary" type="submit" id="plusNewPost">+ New Post</button>
