@@ -1,5 +1,6 @@
 // LOGIN
-const loginFormHandler = async () => {
+const loginFormHandler = async (event) => {
+  event.preventDefault();
   // Collect the values from the login form
   const username = document.querySelector("#username-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
@@ -14,8 +15,10 @@ const loginFormHandler = async () => {
     // if successful, redirect to the 'Dashboard' page
     if (response.ok) {
       document.location.replace("/dashboard");
+      console.log("ok");
     } else {
       alert(response.statusText);
+      console.log("nope");
     }
   }
 };
@@ -26,7 +29,8 @@ const loginFormHandler = async () => {
 //   .addEventListener("submit", loginFormHandler);
 
 // SIGNUP
-const signupFormHandler = async () => {
+const signupFormHandler = async (event) => {
+  event.preventDefault();
   // Collect values from the sign up form
   const username = document.querySelector("#username-signUp").value.trim();
   const password = document.querySelector("#password-signUp").value.trim();
