@@ -62,7 +62,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
   }
 });
 
-//
+// get dashboard
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -81,6 +81,17 @@ router.get("/dashboard", withAuth, async (req, res) => {
     // console.log("!!!!!!!!", req.session.user_id);
     console.log("~~~~~~", user.title);
     //console.log("??????", allposts.title);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get the your dashboard add page
+router.get("/yourDashboardAdd", withAuth, async (req, res) => {
+  try {
+    res.render("yourDashboardAdd", {
+      logged_in: true,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

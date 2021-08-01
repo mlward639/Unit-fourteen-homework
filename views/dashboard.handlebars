@@ -8,15 +8,27 @@
 
     <div class="row mb-4 posts">
       <div class="col-md-5 homepage">
+        {{#each post as |post| }}
         <h2>
-          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-          <a href="/posts/{{user.id}}">{{user.title}}</a><span>: Posted by {{user.username}} on {{date_created}}</span>
+          {{post.title}}</a><span>: Posted by {{post.username}} on {{post.date_created}}</span>
         </h2>
-        <p>{{allposts.content}}</p>
+        <p>{{post.content}}</p>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger deleteBtn" data-id="{{post.id}}">DELETE</button>
+      </div>
       </div>
     </div>
-
+{{/each}}
 
     <div class="form-group">
-      <button class="btn btn-secondary" type="submit" id="plusNewPost">+ New Post</button>
+      <button class="btn btn-secondary" type="button" id="plusNewPost" onclick="plusNewPost()">+ New Post</button>
     </div>
+
+<script src="../public/js/buttons.js"></script> 
+<script src="../public/js/login.js"></script>
+<script src="../public/js/logout.js"></script>
+<script src="../public/js/plusNewPost.js"></script>
+<script>
+  function plusNewPost() {
+  document.location.replace("/yourDashboardAdd");
+}</script>
