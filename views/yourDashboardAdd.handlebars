@@ -6,7 +6,7 @@
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/dashboard">Dashboard</a> |
-        <a href="######" id="logout">Logout</a>
+        <a onclick="logout()" id="logout">Logout</a>
         {{else}}
         <a href="/login">Dashboard</a> |
         <a href="/login">Login</a>
@@ -40,7 +40,7 @@
 
 
     
-<script src="../public/js/buttons.js"></script>
-<script src="../public/js/login.js"></script>
-<script src="../public/js/logout.js"></script>
-<script src="../public/js/plusNewPost.js"></script>
+<script src="/js/buttons.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/plusNewPost.js"></script>

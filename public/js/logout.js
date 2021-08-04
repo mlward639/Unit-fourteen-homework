@@ -1,6 +1,6 @@
 // LOGOUT
 // Send POST request to API endpoint
-const logout = async () => {
+var logout = async () => {
   const response = await fetch("/api/users/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -14,4 +14,4 @@ const logout = async () => {
 };
 
 // When click on 'logout', run the logout function
-document.querySelector("#logout").addEventListener("click", logout);
+// document.querySelector("#logout").addEventListener("click", logout);

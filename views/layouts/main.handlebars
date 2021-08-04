@@ -18,7 +18,7 @@
           {{#if logged_in}}
             <a href="/dashboard">Dashboard</a>
             |
-            <button class="no-button" id="logout">Logout</button>
+            <a id="logout" onclick="logout()">Logout</a>
           {{else}}
             <a href="/login">Login</a>
           {{/if}}
@@ -43,7 +43,7 @@
 
 </html>
 
-<script src="../public/js/buttons.js"></script>
-<script src="../public/js/login.js"></script>
-<script src="../public/js/logout.js"></script>
-<script src="../public/js/plusNewPost.js"></script>
+{{! <script src="/js/buttons.js"></script> }}
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/plusNewPost.js"></script>
