@@ -63,6 +63,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
 });
 
 // get dashboard
+//HOW TO GET THE USERS ONLY POSTS TO SHOW UP HERE!!!!
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -71,15 +72,15 @@ router.get("/dashboard", withAuth, async (req, res) => {
       include: [{ model: AllPosts }],
     });
 
-    const user = userData.get({ plain: true });
+    const user = await userData.get({ plain: true });
 
     res.render("dashboard", {
-      ...user,
+      user,
       logged_in: true,
     });
     // console.log("**********", user);
     // console.log("!!!!!!!!", req.session.user_id);
-    console.log("~~~~~~", user.title);
+    console.log("~~~~~~", user);
     //console.log("??????", allposts.title);
   } catch (err) {
     res.status(500).json(err);

@@ -1,29 +1,29 @@
-<header class="display-flex justify-space-between align-center p-2">
+<header>
   <nav>
-    <a href="/home">Home</a>
+    <a href="/">Home</a>
     |
     <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
       <a href="/dashboard">Dashboard</a>
       |
-      <a onclick="logout()" id="logout">Logout</a>
+      <a id="logout" onclick="logout()">Logout</a>
     {{else}}
-      <a href="/login">Dashboard</a>
-      |
       <a href="/login">Login</a>
     {{/if}}
   </nav>
   <h1>
-    <a href="/" id="title">The Tech Blog</a>
+    <a href="/" id="title">Your Dashboard</a>
   </h1>
 </header>
 
-<!-- Loop over each object in the blogs array -->
-{{#each posts as |post|}}
+<div>
+  <p>TEST</p>
+</div>
+{{#each user.posts as |post|}}
   <div class="row mb-4 posts">
-    <div class="col-md-5 homepage">
+    <div class="col-md-5">
       <h2>
-        <a href="/posts/{{user.id}}">{{title}}</a><span>: Posted by
+        <a href="/posts/{{user.id}}">{{title}}TEST</a><span>: Posted by
           {{user.username}}
           on
           {{format_date date_created}}</span>

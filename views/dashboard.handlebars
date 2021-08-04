@@ -4,11 +4,11 @@
     |
     <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
-    <a href="/dashboard">Dashboard</a>
-    |
-    <a id="logout" onclick="logout()">Logout</a>
+      <a href="/dashboard">Dashboard</a>
+      |
+      <a id="logout" onclick="logout()">Logout</a>
     {{else}}
-    <a href="/login">Login</a>
+      <a href="/login">Login</a>
     {{/if}}
   </nav>
   <h1>
@@ -16,31 +16,34 @@
   </h1>
 </header>
 
-<!-- Loop over each object in your blogs array -->
-
+{{#if user.posts.length}}
+  {{#each user.posts as |post|}}
     <div class="row mb-4 posts">
-      <div class="col-md-5 homepage">
-        {{#each post as |post| }}
+      <div class="col-md-5">
         <h2>
-          {{post.title}}</a><span>: Posted by {{post.username}} on {{post.date_created}}</span>
+          <a href="/posts/{{user.id}}">{{title}}TEST</a><span>: Posted by
+            {{user.username}}
+            on
+            {{format_date date_created}}</span>
         </h2>
-        <p>{{post.content}}</p>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger deleteBtn" data-id="{{post.id}}">DELETE</button>
-      </div>
+        <p>{{content}}</p>
       </div>
     </div>
-{{/each}}
+  {{/each}}
 
-    <div class="form-group">
-      <button class="btn btn-secondary" type="button" id="plusNewPost" onclick="plusNewPost()">+ New Post</button>
-    </div>
+{{/if}}
 
-<script src="/js/buttons.js"></script> 
+<div class="form-group">
+  <button
+    class="btn btn-secondary"
+    type="button"
+    id="plusNewPost"
+    onclick="plusNewPost()"
+  >+ New Post</button>
+</div>
+
+<script>
+  function plusNewPost() { document.location.replace("/yourDashboardAdd"); }</script>
 <script src="/js/login.js"></script>
 <script src="/js/logout.js"></script>
 <script src="/js/plusNewPost.js"></script>
-<script>
-  function plusNewPost() {
-  document.location.replace("/yourDashboardAdd");
-}</script>

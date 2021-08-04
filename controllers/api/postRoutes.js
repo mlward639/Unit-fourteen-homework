@@ -24,6 +24,7 @@ router.put("/post/:id", withAuth, async (req, res) => {
   }
 });
 
+// Create new post
 router.post("/", async (req, res) => {
   try {
     const newPost = await AllPosts.create({
