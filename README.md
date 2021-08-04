@@ -17,20 +17,7 @@ CMS-style blog site where developers can publish blog posts and articles, as wel
 
 ## Installation
 
-- Use package.json to download dependencies. In terminal, type:
-
-          npm install
-
-  ------------UPDATE ---------------------
-
-- To populate database with test data, type the following in the terminal:
-        run node seeds
-        --------------
-- To begin application, type the following in the terminal:
-         npm start
-         --------------
-
----
+- Navigate to heroku site below
 
 ## Usage
 
@@ -53,14 +40,8 @@ Libraries:
 - Express.js API to create back end of web application
 - Sequelize for object–relational mapping
 - Dotenv package to use environmental variables to store sensitive data
-- Insomnia REST client for API testing --------------
 - Handlebars.js for templating language (express-handlebars package to implement Handlebar.js)
 - Express-session and connect-session-sequelize for authentication
-  -------DELETE --------------------
-  **Note**: The [express-session](https://www.npmjs.com/package/express-session) package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
-
----
-
 - Heroku to deploy
 - Bcrypt to hash passwords
 
@@ -88,9 +69,17 @@ Source for licensing information: <a href="https://opensource.org/licenses/MIT">
 
 ## Screenshots
 
-Screenshot of
+Screenshot of Homepage
 
-<img src='' alt = 'Screenshot of '>
+<img src='public\images\screenshot-homepage.png' alt = 'Screenshot of homepage'>
+
+Screenshot of Login Page
+
+<img src='public\images\screenshot-login.png' alt = 'Screenshot of login page'>
+
+Screenshot of Add Post Page
+
+<img src='public\images\screenshot-add-post.png' alt = 'Screenshot of Add Post Page'>
 
 ## URLs
 
