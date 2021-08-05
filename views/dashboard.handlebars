@@ -21,12 +21,17 @@
     <div class="row mb-4 posts">
       <div class="col-md-5">
         <h2>
-          <a href="/dashboard/{{post.id}}">{{title}}TEST</a><span>: Posted by
-            {{user.username}}
-            on
+          <a href="/dashboard/{{post.id}}">{{title}}</a><span>: Posted on
             {{format_date date_created}}</span>
         </h2>
         <p>{{content}}</p>
+      </div>
+      <div class="col-md-4">
+        <button
+          class="btn btn-sm btn-danger delete"
+          data-id="{{post.id}}"
+          onclick="delButtonHandler(event)"
+        >DELETE</button>
       </div>
     </div>
   {{/each}}
@@ -47,3 +52,4 @@
 <script src="/js/login.js"></script>
 <script src="/js/logout.js"></script>
 <script src="/js/plusNewPost.js"></script>
+<script src="/js/buttons.js"></script>

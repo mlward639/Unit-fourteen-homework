@@ -4,7 +4,7 @@ var newFormHandler = async (event) => {
 
   const title = document.querySelector("#postTitle").value.trim();
   const content = document.querySelector("#postContent").value.trim();
-  console.log("*******", title, content);
+  //console.log("*******", title, content);
   if (title && content) {
     const response = await fetch(`/api/post/`, {
       method: "POST",
@@ -23,21 +23,21 @@ var newFormHandler = async (event) => {
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute("data-id")) {
+//     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/post/${id}`, {
-      method: "DELETE",
-    });
+//     const response = await fetch(`/api/post/${id}`, {
+//       method: "DELETE",
+//     });
 
-    if (response.ok) {
-      document.location.replace("/dashboard");
-    } else {
-      alert("Failed to delete post");
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace("/dashboard");
+//     } else {
+//       alert("Failed to delete post");
+//     }
+//   }
+// };
 
 // document
 //   .querySelector(".deleteBtn")

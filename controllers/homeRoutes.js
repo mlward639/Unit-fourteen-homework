@@ -73,14 +73,14 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
 
     const user = await userData.get({ plain: true });
-    console.log("HERE", userData);
+    //console.log("HERE", userData);
     res.render("dashboard", {
       user,
       logged_in: true,
     });
     // console.log("**********", user);
     // console.log("!!!!!!!!", req.session.user_id);
-    console.log("~~~~~~", user);
+    //console.log("~~~~~~", user);
     //console.log("??????", allposts.title);
   } catch (err) {
     res.status(500).json(err);

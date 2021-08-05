@@ -4,7 +4,7 @@ var loginFormHandler = async (event) => {
   // Collect the values from the login form
   const username = document.querySelector("#username-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
-  console.log("TESSSSTTTT", username, password);
+  //console.log("TESSSSTTTT", username, password);
   // Once enter login info, send POST request to the API endpoint
   if (username && password) {
     const response = await fetch("/api/users/login", {
@@ -15,10 +15,10 @@ var loginFormHandler = async (event) => {
     // if successful, redirect to the 'Dashboard' page
     if (response.ok) {
       document.location.replace("/dashboard");
-      console.log("ok");
+      //console.log("ok");
     } else {
       alert(response.statusText);
-      console.log("nope");
+      //console.log("nope");
     }
   }
 };
