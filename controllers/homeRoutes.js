@@ -87,6 +87,31 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
+// NOT SURE ABOUT THIS ONE. TEST AFTER GETTING THE ONE ABOVE TO WORK
+// specific post on dashboard (use when click on a post and open page to edit it)
+router.get("/dashboard/:id", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const postData = await AllPosts.findOne({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+    const user = await userData.get({ plain: true });
+    if (!postData) {
+      res.status(404).json({ message: "No post found with this id" });
+      return;
+    }
+    res.render("yourDashboardUpdate", {
+      user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // get the your dashboard add page
 router.get("/yourDashboardAdd", withAuth, async (req, res) => {
   try {
