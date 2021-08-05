@@ -40,7 +40,7 @@ router.get("/signup", async (req, res) => {
 // add link on title name of posts to change url to this **********
 // add comment handlebar *****
 // when clicking on one post, it is opened and redirected to add comment page
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await AllPosts.findByPk(req.params.id, {
       include: [
