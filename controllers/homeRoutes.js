@@ -40,9 +40,9 @@ router.get("/signup", async (req, res) => {
 // add link on title name of posts to change url to this **********
 // add comment handlebar *****
 // when clicking on one post, it is opened and redirected to add comment page
-router.get("/post/:id", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
+    const postData = await AllPosts.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -87,7 +87,6 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
-// NOT SURE ABOUT THIS ONE. TEST AFTER GETTING THE ONE ABOVE TO WORK
 // specific post on dashboard (use when click on a post and open page to edit it)
 router.get("/dashboard/:id", withAuth, async (req, res) => {
   try {

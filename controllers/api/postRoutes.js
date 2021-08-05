@@ -78,4 +78,24 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+// NOT WORKING!!!!
+//add comment to a post
+router.post("/:id", async (req, res) => {
+  try {
+    const comment = await AllPosts.update(
+      {
+        comment: req.body.comment,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(comment);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
