@@ -98,13 +98,13 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-    const user = await userData.get({ plain: true });
+    const post = await postData.get({ plain: true });
     if (!postData) {
       res.status(404).json({ message: "No post found with this id" });
       return;
     }
     res.render("yourDashboardUpdate", {
-      user,
+      post,
       logged_in: true,
     });
   } catch (err) {
