@@ -58,4 +58,24 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// update one of your posts
+router.put("/:id", async (req, res) => {
+  try {
+    const editedPost = await AllPosts.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(editedPost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
