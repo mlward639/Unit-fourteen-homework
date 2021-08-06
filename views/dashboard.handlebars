@@ -2,14 +2,9 @@
   <nav>
     <a href="/">Home</a>
     |
-    <!-- Conditionally render login or logout links -->
-    {{#if logged_in}}
-      <a href="/dashboard">Dashboard</a>
-      |
-      <a id="logout" onclick="logout()">Logout</a>
-    {{else}}
-      <a href="/login">Login</a>
-    {{/if}}
+    <a href="/dashboard">Dashboard</a>
+    |
+    <a id="logout" onclick="logout()">Logout</a>
   </nav>
   <h1>
     <a href="/" id="title">Your Dashboard</a>
