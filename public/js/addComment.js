@@ -1,4 +1,4 @@
-const commentFormHandler = async (event) => {
+var commentFormHandler = async (event) => {
   event.preventDefault();
   console.log("RUNNINGGGGGGGGGG");
 

@@ -63,8 +63,7 @@ router.put("/:id", async (req, res) => {
   try {
     const editedPost = await AllPosts.update(
       {
-        title: req.body.title,
-        content: req.body.content,
+        ...req.body,
       },
       {
         where: {
@@ -72,6 +71,7 @@ router.put("/:id", async (req, res) => {
         },
       }
     );
+    console.log(editedPost);
     res.status(200).json(editedPost);
   } catch (err) {
     res.status(500).json(err);
@@ -79,23 +79,24 @@ router.put("/:id", async (req, res) => {
 });
 
 // NOT WORKING!!!!
-//add comment to a post
-router.post("/:id", async (req, res) => {
-  try {
-    const comment = await AllPosts.update(
-      {
-        comment: req.body.comment,
-      },
-      {
-        where: {
-          id: req.params.id,
-        },
-      }
-    );
-    res.status(200).json(comment);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// //add comment to a post
+// router.put("/:id", async (req, res) => {
+//   console.log(req.body);
+//   try {
+//     const comment = await AllPosts.update(
+//       {
+//         comment: req.body.comment,
+//       },
+//       {
+//         where: {
+//           id: req.params.id,
+//         },
+//       }
+//     );
+//     res.status(200).json(comment);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
