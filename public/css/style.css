@@ -92,7 +92,8 @@ input {
   bottom: 20px;
 }
 
-.homepage h2 {
+.homepage h2,
+.dashboard h2 {
   font-size: 20px;
   background-color: var(--darkBrown);
   color: white;
@@ -100,16 +101,25 @@ input {
   padding: 5px;
 }
 
-.homepage span {
+.homepage span,
+.dashboard span {
   font-size: 12px;
+  float: right;
 }
 
-.homepage p {
+.homepage p,
+.dashboard p {
   font-size: 14px;
   padding: 5px;
 }
 
-.homepage {
+.homepage,
+.dashboard {
   border: 2px solid var(--darkBrown);
   margin: 15px;
+}
+
+.br-btn {
+  background-color: var(--darkBrown);
+  color: white;
 }
